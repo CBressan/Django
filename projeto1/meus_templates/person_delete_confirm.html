@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+    <h1>Tem certeza que deseja deletar? </h1>
+
+    <form method="POST" enctype="multipart/form-data"> #enctype é p fazer o upload dos arquivos me midia
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Delete </button>
+    </form>
+</body>
+</html>

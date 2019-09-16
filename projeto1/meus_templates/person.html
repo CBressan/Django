@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <ul>
+        {% for pessoa in galeres  %}
+        <li>
+            <a href="{% url 'person_update' pessoa.id %}"> {{pessoa.first_name}} </a> <!-- a é pra criar link -->
+            <a href="{% url 'person_delete' pessoa.id %}"> Deletar </a>
+        </li> <!-- está colocando cada pessoa dentro da lista html -->
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'person_new' %}"> Novo cliente </a>
+</body>
+</html>
